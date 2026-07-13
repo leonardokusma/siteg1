@@ -537,6 +537,107 @@ ul { list-style: none; }
 }
 .value-icon svg { width: 12px; height: 12px; }
 
+/* ---------- SOBRE HISTORIA ---------- */
+.sobre-historia {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 60px;
+  align-items: start;
+  margin: 56px 0 72px;
+}
+.sobre-historia-texto {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.sobre-historia-texto p {
+  font-size: 1rem;
+  color: var(--text-mid);
+  line-height: 1.85;
+}
+.sobre-historia-texto p strong {
+  color: var(--text-dark);
+  font-weight: 700;
+}
+.sobre-historia-texto p:first-child {
+  font-size: 1.05rem;
+  color: var(--text-dark);
+}
+
+.sobre-historia-destaque {
+  background: linear-gradient(160deg, var(--dark) 0%, var(--dark-2) 100%);
+  border-radius: var(--radius-lg);
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(0,92,255,.15);
+}
+.sobre-historia-destaque::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), #4d94ff);
+}
+.sobre-destaque-badge {
+  width: 52px; height: 52px;
+  border-radius: var(--radius-sm);
+  background: rgba(0,92,255,.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+}
+.sobre-destaque-quote {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: rgba(255,255,255,.92);
+  line-height: 1.6;
+  margin: 0;
+  font-style: italic;
+  border-left: 3px solid var(--accent);
+  padding-left: 16px;
+}
+.sobre-destaque-stats {
+  display: flex;
+  gap: 0;
+  align-items: center;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+.sobre-stat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0 12px;
+}
+.sobre-stat:first-child { padding-left: 0; }
+.sobre-stat-value {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.7rem;
+  font-weight: 900;
+  color: var(--accent);
+  line-height: 1;
+}
+.sobre-stat-label {
+  font-size: .75rem;
+  color: rgba(255,255,255,.5);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  line-height: 1.4;
+}
+.sobre-stat-sep {
+  width: 1px;
+  height: 40px;
+  background: rgba(255,255,255,.1);
+}
+
 /* ---------- CT PHOTO ---------- */
 .ct-photo {
   padding: 100px 0;
@@ -1044,6 +1145,7 @@ ul { list-style: none; }
   .mvv-grid { grid-template-columns: 1fr; }
   .depoimentos-grid { grid-template-columns: 1fr; }
   .ct-gallery { grid-template-columns: 1fr; gap: 16px; }
+  .sobre-historia { grid-template-columns: 1fr; gap: 36px; margin: 40px 0 56px; }
   .contato-inner { grid-template-columns: 1fr; gap: 48px; }
   .footer-top { grid-template-columns: 1fr; gap: 40px; }
   .footer-bottom { flex-direction: column; text-align: center; }
