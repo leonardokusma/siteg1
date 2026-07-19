@@ -181,16 +181,19 @@ ul { list-style: none; }
   flex-shrink: 0;
   margin-right: auto;
 }
-.logo-icon { display: flex; align-items: center; }
-.logo-text {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.15rem;
-  font-weight: 800;
-  color: #fff;
-  letter-spacing: -.01em;
+.logo-img {
+  height: 44px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  transition: opacity var(--transition);
 }
-.logo-text--white { color: #fff; }
-.logo-accent { color: var(--accent); }
+.logo:hover .logo-img { opacity: .85; }
+.logo-img--footer {
+  height: 52px;
+  filter: brightness(0) invert(1);
+}
+
 
 .nav-links {
   display: flex;
